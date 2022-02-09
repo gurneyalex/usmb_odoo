@@ -2,3 +2,8 @@
 	path = akretion/sale-import
 	url = git@github.com:akretion/sale-import.git
 	branch = 14.0
+
+[submodule "OCA/rest-framework"]
+	path = OCA/rest-framework
+	url = git@github.com:OCA/rest-framework.git
+	branch = 14.0
