@@ -175,4 +175,4 @@ class PatchedTestSaleCommonBase(common.TestSaleCommonBase):
 
         return company_data
 
-common.TestSaleCommonBase = PatchedTestSaleCommonBase
+common.TestSaleCommonBase.setup_sale_configuration_for_company = PatchedTestSaleCommonBase.setup_sale_configuration_for_company
