@@ -1,0 +1,4 @@
+[submodule "akretion/sale-import"]
+	path = akretion/sale-import
+	url = git@github.com:akretion/sale-import.git
+	branch = 14.0
