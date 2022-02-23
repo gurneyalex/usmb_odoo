@@ -7,6 +7,6 @@
     "version": "14.0.1.0.0",
     "license": "AGPL-3",
     "author": "USMB",
-    "depends": ["sale_import_rest"],
+    "depends": ["sale_import_rest", "base_rest_auth_api_key", "base_rest_datamodel"],
     "data": [],
 }
