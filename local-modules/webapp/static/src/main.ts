@@ -1,11 +1,18 @@
+import 'bulma-popover/css/bulma-popover.css'
+import 'bulma/css/bulma.css'
+import { createApp } from 'vue'
+import { createI18n } from 'vue-i18n'
+import { createRouter, createWebHistory } from 'vue-router'
+// @ts-ignore
+import { Vue3Mq } from 'vue3-mq'
+import App from './App.vue'
+import Cart from './components/cart/Cart.vue'
+import Catalog from './components/Catalog.vue'
+import Connexion from './components/connexion/Connexion.vue'
+import messages from './i18n/messages'
+import store from './state/store'
+import History from './components/history/History.vue'
 
-import messages from '../src/i18n/messages.js'
-
-
-
-const { createApp } = Vue;
-const { createI18n } = VueI18n;
-const { createRouter } = VueRouter;
 
 const i18n = createI18n({
     locale: navigator.language,
