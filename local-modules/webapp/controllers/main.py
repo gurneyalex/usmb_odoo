@@ -1,7 +1,14 @@
 from odoo import http
+from odoo.addons.base_rest.controllers.main import RestController
 
 class Academy(http.Controller):
 
     @http.route('/test/', auth='public')
     def index(self, **kw):
         return "Hello, world"
+
+
+class WebappBaseController(RestController):
+    _root_path = "/webapp/"
+    _collection = 'webapp.backend'
+    _default_auth = "api_key"
