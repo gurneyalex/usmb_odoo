@@ -31,6 +31,12 @@ class Authentication(Datamodel):
     password = fields.String(required=True)
 
 
+class UserInfo(Datamodel):
+    _name = "userinfo"
+    name = fields.String()
+    login = fields.String()
+
+
 class ProductList(Datamodel):
     _name = "product.list"
     products = fields.List(fields.NestedModel('product'))
