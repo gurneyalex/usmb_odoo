@@ -12,3 +12,9 @@ class WebappBaseController(RestController):
     _root_path = "/webapp/"
     _collection = 'webapp.backend'
     _default_auth = "api_key"
+
+
+class SaleImportBaseController(RestController):
+    _root_path = "/channel-api/"
+    _collection_name = "sale.import.rest.services"
+    _default_auth = "api_key"

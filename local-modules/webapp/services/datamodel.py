@@ -43,5 +43,47 @@ class ProductList(Datamodel):
 
 class SaleList(Datamodel):
     _name = "sale.order.list"
-    sales = fields.NestedModel('sale.order', many=True)
+    sales = fields.List(fields.NestedModel('sale.order'))
 
+
+
+class SaleOrderAddressDatamodel(Datamodel):
+    _name = "sale.order.address"
+
+    name = fields.Str(required=True)
+    street = fields.Str(required=True)
+    street2 = fields.Str(allow_none=True)
+    zip = fields.Integer(required=True)
+    city = fields.Str(required=True)
+    email = fields.Email()
+    state_code = fields.Str()
+    country_code = fields.Str(required=True)
+    phone = fields.Str()
+    mobile = fields.Str()
+
+
+class SaleOrderCustomerDatamodel(Datamodel):
+    _inherit = "sale.order.address"
+    _name = "sale.order.customer"
+
+    email = fields.Str(required=True)
+
+
+class SaleOrderDatamodel(Datamodel):
+    _name = "sale.order"
+
+    name = fields.Str()
+    #address_customer = fields.NestedModel("sale.order.customer", required=True)
+    lines = fields.List(fields.NestedModel("sale.order.line"),required=True)
+    amount = fields.Decimal()
+    date_order = fields.Date(required=True)
+
+
+class SaleOrderLineDatamodel(Datamodel):
+    _name = "sale.order.line"
+
+    product_code = fields.Str(required=True)
+    qty = fields.Decimal(required=True)
+    packaging = fields.Str(required=True)
+    price_unit = fields.Decimal(required=True)
+    description = fields.Str()
