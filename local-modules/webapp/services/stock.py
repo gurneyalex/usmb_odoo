@@ -25,6 +25,7 @@ class StockService(Component):
         ProductList = self.env.datamodels['product.list']
         Product = self.env.datamodels['product']
         Packaging = self.env.datamodels['product.packaging.info']
+        Translation = self.env.datamodels['translation']
         vals = []
         for product in products:
             packagings = []
@@ -38,11 +39,55 @@ class StockService(Component):
                                       weight=product.weight,
                                       unit_price=product.lst_price)
                 packagings.append(pack_info)
+            name_translations = {}
+            description_translations = {}
+            for lang in ['fr_FR', 'de_DE', 'it_IT']:
+                loc_product = product.with_context(lang=lang)
+                name_translations[lang[:2]] = loc_product.name or ""
+                description_translations[lang[:2]] = loc_product.description or ""
+
+            name_translations = Translations(**name_translations)
+            description_translations = Translation(**description_translations)
             prod_info = Product(name=product.name,
                                 product_ref=product.default_code,
                                 barcode=product.barcode or "",
                                 description=product.description or "",
-                                packagings=packagings)
+                                packagings=packagings,
+                                name_translations=name_translations,
+                                description_translations=description_translations(),
+                                origin=product.country_of_origin,
+                                category = product.categ_id.display_name,
+                                discount = product.current_discount,
+                                season_start = product.season_start,
+                                season_end = product.season_end,
+            )
             vals.append(prod_info)
-        
+
         return ProductList(products=vals)
+
+    @restapi.method(
+        [(['/categories'], 'GET')],
+        output_param=restapi.Datamodel("product.category.list"),
+        auth="api_key",
+    )
+    def get_categories(self):
+        Category = self.env.datamodels['product.category']
+        CategoryList = self.env.datamodels['product.category.list']
+        Translation = self.env.datamodels['translation']
+
+        res = []
+        categories = self.env['product.category'].search([])
+        for cat in categories.filtered('product_count'):
+            name_translations = {}
+            for lang in ['fr_FR', 'de_DE', 'it_IT']:
+                loc_cat = cat.with_context(lang=lang)
+                name_translations[lang[:2]] = loc_cat.intl_name or loc_cat.name
+            res.append(
+                Category(
+                    name=cat.intl_name or cat.name,
+                    parent_path=cat.parent_id.display_name or '',
+                    name_translations=Translation(**name_translations)
+                )
+            )
+        print (res)
+        return CategoryList(categories=res)

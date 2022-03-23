@@ -8,5 +8,5 @@
     "license": "AGPL-3",
     "author": "USMB",
     "depends": ["base_rest_auth_api_key", "base_rest_datamodel", "sale_stock"],
-    "data": [],
+    "data": ['views/webapp_views.xml'],
 }
