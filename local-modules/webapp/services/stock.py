@@ -46,7 +46,7 @@ class StockService(Component):
                 name_translations[lang[:2]] = loc_product.name or ""
                 description_translations[lang[:2]] = loc_product.description or ""
 
-            name_translations = Translations(**name_translations)
+            name_translations = Translation(**name_translations)
             description_translations = Translation(**description_translations)
             prod_info = Product(name=product.name,
                                 product_ref=product.default_code,
@@ -54,8 +54,8 @@ class StockService(Component):
                                 description=product.description or "",
                                 packagings=packagings,
                                 name_translations=name_translations,
-                                description_translations=description_translations(),
-                                origin=product.country_of_origin,
+                                description_translations=description_translations,
+                                origin=product.country_of_origin_id.name or '',
                                 category = product.categ_id.display_name,
                                 discount = product.current_discount,
                                 season_start = product.season_start,
