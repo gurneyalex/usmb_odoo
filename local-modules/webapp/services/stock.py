@@ -20,7 +20,7 @@ class StockService(Component):
     )
     def search(self, pagination):
         products = self.env['product.product'].search(
-            [('sale_ok', '=', True)], order="id", offset=pagination.offset, limit=pagination.number
+            [('sale_ok', '=', True), ('default_code', '!=', False)], order="id", offset=pagination.offset, limit=pagination.number
         )
         ProductList = self.env.datamodels['product.list']
         Product = self.env.datamodels['product']
