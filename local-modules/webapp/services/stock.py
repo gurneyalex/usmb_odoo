@@ -32,7 +32,6 @@ class StockService(Component):
         Translation = self.env.datamodels['translation']
         vals = []
         for product in products:
-            _logger.info('checking product %s (default_code: %s)', product.display_name, product.default_code)
             packagings = []
             for pack in product.packaging_ids:
                 pack_info = Packaging(name=pack.name,
