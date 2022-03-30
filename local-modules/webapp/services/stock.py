@@ -1,9 +1,13 @@
+import logging
+
 from odoo.addons.base_rest import restapi
 from odoo.addons.component.core import Component
 from odoo.tools.translate import _
 from werkzeug.exceptions import Forbidden
 
 from odoo.addons.datamodel.core import Datamodel
+_logger = logging.getLogger(__name__)
+
 
 class StockService(Component):
     _inherit = 'base.webapp.service'
@@ -28,6 +32,7 @@ class StockService(Component):
         Translation = self.env.datamodels['translation']
         vals = []
         for product in products:
+            _logger.info('checking product %s (default_code: %s)', product.display_name, product.default_code)
             packagings = []
             for pack in product.packaging_ids:
                 pack_info = Packaging(name=pack.name,
