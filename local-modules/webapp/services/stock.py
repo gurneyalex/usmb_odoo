@@ -54,7 +54,7 @@ class StockService(Component):
             name_translations = Translation(**name_translations)
             description_translations = Translation(**description_translations)
             prod_info = Product(name=product.name,
-                                product_ref=product.default_code,
+                                product_ref=product.default_code or "",
                                 barcode=product.barcode or "",
                                 description=product.description or "",
                                 packagings=packagings,
