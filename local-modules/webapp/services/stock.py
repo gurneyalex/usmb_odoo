@@ -93,5 +93,4 @@ class StockService(Component):
                     name_translations=Translation(**name_translations)
                 )
             )
-        print (res)
         return CategoryList(categories=res)
