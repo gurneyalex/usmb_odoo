@@ -1,6 +1,8 @@
 from odoo import http
 from odoo.addons.base_rest.controllers.main import RestController
 
+DIRECTORY = "../static/src/"
+
 class Academy(http.Controller):
 
     @http.route('/test/', auth='public')
