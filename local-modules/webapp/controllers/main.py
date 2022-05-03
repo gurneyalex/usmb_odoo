@@ -1,11 +1,13 @@
 from odoo import http
 from odoo.addons.base_rest.controllers.main import RestController
 
-class Academy(http.Controller):
+DIRECTORY = "../static/src/"
 
-    @http.route('/test/', auth='public')
+class Academy(http.Controller):
+        
+    @http.route('/projet/', auth='public')
     def index(self, **kw):
-        return "Hello, world"
+        super().__init__(*args, directory=DIRECTORY, **kwargs)
 
 
 class WebappBaseController(RestController):
