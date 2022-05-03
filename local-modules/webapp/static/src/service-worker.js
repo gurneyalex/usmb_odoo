@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.66d612a37b77b9db4a4f893721dadbf1.js"
+  "precache-manifest.e1bae1072748b571cc7e0deeb0bd26a9.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "projet-camptocamp-m1-2021-2022"});
