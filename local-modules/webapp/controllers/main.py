@@ -1,12 +1,11 @@
 from odoo import http
 from odoo.addons.base_rest.controllers.main import RestController
-from Flask import send_from_directory
 
 class Academy(http.Controller):
 
     @http.route('/projet/', auth='public')
     def send_report(path):
-        return send_from_directory('reports', "../static/src/")
+        return http.send_static_file("../static/src")
 
     @http.route('/test/', auth='public')
     def send_report(path):
