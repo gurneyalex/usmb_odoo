@@ -5,9 +5,9 @@ DIRECTORY = "../static/src/"
 
 class Academy(http.Controller):
 
-    @http.route('/projet/', auth='public')
+    @http.route('/test/', auth='public')
     def index(self, **kw):
-        super().__init__(*args, directory=DIRECTORY, **kwargs)
+        return "Hello, world"
 
 
 class WebappBaseController(RestController):
