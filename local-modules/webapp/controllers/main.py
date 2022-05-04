@@ -4,7 +4,7 @@ from odoo.addons.base_rest.controllers.main import RestController
 class Academy(http.Controller):
 
     @http.route('/test/', auth='public')
-    def index(path):
+    def send_report(path):
         return "TEST"
 
 
