@@ -3,7 +3,7 @@
 
 {
     "name": "USMB Webapp",
-    "summary": """webapp from USMB""",
+    "summary": """webapp from USMP""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",
     "author": "USMB",
