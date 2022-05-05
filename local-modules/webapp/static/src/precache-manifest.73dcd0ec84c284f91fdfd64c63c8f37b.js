@@ -1,5 +1,45 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "00849b9b53c264b77fe5a86e5dd98631",
+    "url": "images/assets/ecoscore/A.png"
+  },
+  {
+    "revision": "e7f9b1470915502f0f20dd66a7dc8657",
+    "url": "images/assets/ecoscore/B.png"
+  },
+  {
+    "revision": "ecb8cce62717ce8786a08b47fc643224",
+    "url": "images/assets/ecoscore/C.png"
+  },
+  {
+    "revision": "c508cc6ab4aa325655db570850cc5961",
+    "url": "images/assets/ecoscore/D.png"
+  },
+  {
+    "revision": "6a4bd71155eb8dc783f6172cb86bf158",
+    "url": "images/assets/ecoscore/E.png"
+  },
+  {
+    "revision": "430598ecc5db8d8cfcbb7ea042c0ce83",
+    "url": "images/assets/nutriscore/A.jpg"
+  },
+  {
+    "revision": "c81ff0f7b8205f13a1fde122f593bb53",
+    "url": "images/assets/nutriscore/B.jpg"
+  },
+  {
+    "revision": "55ef20962e3d6a6315e70217d625433a",
+    "url": "images/assets/nutriscore/C.jpg"
+  },
+  {
+    "revision": "606441ca804d7022f0495f60275aa418",
+    "url": "images/assets/nutriscore/D.jpg"
+  },
+  {
+    "revision": "4818d1e6d7c102b82c82f5ab0688adfb",
+    "url": "images/assets/nutriscore/E.jpg"
+  },
+  {
     "revision": "6872b9105f3e2df6e7e69b728be8c899",
     "url": "images/betteraves.jpg"
   },
@@ -56,12 +96,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/zucchini.jpg"
   },
   {
-    "revision": "a5021727d9143924df9061f9d211db7c",
+    "revision": "c2b5ffb62658ce1d79e7dfb56dffcbdc",
     "url": "index.html"
   },
   {
-    "revision": "ff5ae18d218dc5fd2f61",
-    "url": "js/app.320cc71d.js"
+    "revision": "5e5e97c59a40596d666a",
+    "url": "js/app.3ffc184e.js"
   },
   {
     "revision": "186cc0642f047b57e5f63a97691f36ac",
