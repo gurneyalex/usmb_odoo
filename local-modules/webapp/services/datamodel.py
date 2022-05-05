@@ -32,6 +32,7 @@ class Product(Datamodel):
     # image is fetched from Open Food Facts -> TODO by students: prepare an import file (from template sent by c2c)
     season_start = fields.Integer() # month number 1 -> 12, 0 if not applicable
     season_end = fields.Integer() # month number 1 -> 12, 0 if not applicable
+    image_url = fields.String()
 
 
 class ProductCategory(Datamodel):  # TODO: add a search to get all categories

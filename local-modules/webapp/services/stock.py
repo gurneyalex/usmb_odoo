@@ -64,6 +64,7 @@ class StockService(Component):
                                 discount = product.current_discount,
                                 season_start = product.season_start,
                                 season_end = product.season_end,
+                                image_url = product.get_image_url(),
             )
             vals.append(prod_info)
 
