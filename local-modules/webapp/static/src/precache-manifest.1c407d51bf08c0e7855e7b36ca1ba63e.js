@@ -56,6 +56,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/favorite.png"
   },
   {
+    "revision": "513b07e42724956e6410c48bb05d4b0f",
+    "url": "images/fleche.png"
+  },
+  {
     "revision": "74cb56b6f3556f73ebab6f6a68bf635a",
     "url": "images/fraise.jpg"
   },
@@ -96,12 +100,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/zucchini.jpg"
   },
   {
-    "revision": "208757c3b72c54700bbc039975e5fb06",
+    "revision": "5d9c0432a9cc374e04f0a8da136ed5ef",
     "url": "index.html"
   },
   {
-    "revision": "7ffb63ca0093af2782d8",
-    "url": "js/app.7856aa67.js"
+    "revision": "efce27baf90eb9d2dedc",
+    "url": "js/app.2ff544b5.js"
   },
   {
     "revision": "186cc0642f047b57e5f63a97691f36ac",
