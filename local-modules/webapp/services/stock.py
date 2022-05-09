@@ -35,8 +35,8 @@ class StockService(Component):
             packagings = []
             for pack in product.packaging_ids:
                 pack_info = Packaging(name=pack.name,
-                                      weight=product.weight*pack.qty,
-                                      unit_price=product.with_context(quantity=pack.qty).price)
+                                      weight=pack.qty,
+                                      unit_price=product.with_context(pricelist=1, quantity=product.weight*pack.qty).price * (100. - product.current_discount) / 100 * pack.qty)
                 packagings.append(pack_info)
             if not packagings:
                 pack_info = Packaging(name="unit",
