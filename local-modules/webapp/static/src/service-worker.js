@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.33878efc5d4f4643fd959e3c60065e89.js"
+  "precache-manifest.af1c45471b4317fef36449f93e454299.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "projet-camptocamp-m1-2021-2022"});
+workbox.core.setCacheNameDetails({prefix: "Odoo-marketplace"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
