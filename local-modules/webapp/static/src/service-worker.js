@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.00d18c592f525d04f6d43509b9e57458.js"
+  "precache-manifest.b98e2344a863de5d050582949daef74c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "Odoo-marketplace"});
